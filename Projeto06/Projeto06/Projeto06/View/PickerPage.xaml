@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.View.PickerPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Qual é a sua empresa favorita?" />
+            <Picker>
+                <Picker.Items>
+                    <x:String>Microsoft</x:String>
+                    <x:String>Google</x:String>
+                    <x:String>Xamarin</x:String>
+                    <x:String>RedHat</x:String>
+                    <x:String>Oracle</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

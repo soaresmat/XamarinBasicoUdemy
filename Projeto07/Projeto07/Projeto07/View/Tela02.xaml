@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto07.View.Tela02"
+             BackgroundColor="Azure">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Blue"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <Label Text="Nome" Style="{StaticResource LabelStyle}"/>
+            <Entry Placeholder="Digite seu nome aqui" PlaceholderColor="Gray" TextColor="Black"/>
+            <Button Text="Enviar" BackgroundColor="Blue"/>
+
+            <Label Text="Resultado" Style="{StaticResource LabelStyle}"/>
+            <Label Text="Resultado Padrão"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto06.View.ProgressBarPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ProgressBar Progress=".1" HorizontalOptions="FillAndExpand"/>
+            <ProgressBar Progress=".15" HorizontalOptions="FillAndExpand"/>
+            <ProgressBar Progress=".25" HorizontalOptions="FillAndExpand"/>
+            <ProgressBar Progress=".5" HorizontalOptions="FillAndExpand"/>
+            <ProgressBar Progress=".81" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

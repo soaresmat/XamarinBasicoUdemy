@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:_01_Dicas_ServicoCEP"
+             x:Class="_01_Dicas_ServicoCEP.MainPage">
+
+    <StackLayout>
+        <Label Text="BUSCADOR DE ENDEREÇO" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Entry x:Name="txtCEP" Placeholder="Digite o CEP" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+        <Button Text="Buscar" Clicked="Button_Clicked" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+        <Label x:Name="lblResultado" Text=""/>
+    </StackLayout>
+
+</ContentPage>

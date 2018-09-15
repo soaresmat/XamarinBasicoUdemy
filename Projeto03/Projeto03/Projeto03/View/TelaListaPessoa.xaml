@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto03.View.TelaListaPessoa">
+
+    <StackLayout>
+        <Label Text="Listagem de Pessoas" FontSize="18" HorizontalOptions="Center"/>
+        
+        <ListView ItemsSource="{Binding Pessoas}" ItemTapped="ListView_ItemDetail">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<ViewCell>
+                        <StackLayout Padding="20">
+                            <Label Text="{Binding Nome}"/>
+                        </StackLayout>
+                    </ViewCell>-->
+                    <TextCell Text="{Binding Nome}" TextColor="DarkSlateGray"/>
+                    <!--<TextCell Text="{Binding Nome}" Detail="{Binding Cargo}"/>-->
+                    <!--<ImageCell ImageSource="https://postcron.com/pt/blog/wp-content/uploads/2016/05/foto-de-perfil-pose-natural-postcron.jpg" Text="{Binding Nome}" Detail="{Binding Cargo}"/>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

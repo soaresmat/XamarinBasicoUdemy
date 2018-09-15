@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto07.View.Tela03">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Digite seu nome" />
+            <Entry Placeholder="Digite seu nome"/>
+            <Button Text="Enviar"/>
+            <Button Text="Enviar" Style="{StaticResource buttonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

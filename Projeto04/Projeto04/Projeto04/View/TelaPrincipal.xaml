@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto04.View.TelaPrincipal"
+             xmlns:convert="clr-namespace:Projeto04.Converter;assembly=Projeto04">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <convert:FinalizadoConverter x:Key="cvtFinalizado"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="txtTarefa" Placeholder="Digite a nova tarefa" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnAdd" Text="Salvar"/>
+            </StackLayout>
+
+            <Label Text="Lista de Tarefas" HorizontalOptions="Center" FontAttributes="Bold" FontSize="24"/>
+
+            <ListView x:Name="lstTarefas" ItemsSource="{Binding Tarefas}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Excluir" Clicked="ExcluirTarefa" CommandParameter="{Binding .}"/>
+                                <MenuItem Text="Editar" Clicked="EditarTarefa" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nome}" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+                                <Button Text="{Binding Finalizado, Converter={StaticResource cvtFinalizado}}" HorizontalOptions="End" VerticalOptions="Center" Clicked="btnMudarSituacao" CommandParameter="{Binding .}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
